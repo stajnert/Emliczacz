@@ -1,0 +1,3 @@
+em_emliczacz_homepage:
+    pattern:  /
+    defaults: { _controller: EmEmliczaczBundle:Main:index }

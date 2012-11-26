@@ -1,0 +1,14 @@
+parameters:
+#    em_emliczacz.example.class: Em\EmliczaczBundle\Example
+
+services:
+  em.emliczacz.admin.evaluation:
+    class: Em\EmliczaczBundle\Admin\EvaluationAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: emliczacz, label: Evaluation }
+    arguments: [null, Em\EmliczaczBundle\Entity\Evaluation, EmEmliczaczBundle:EvaluationAdmin]
+  em.emliczacz.admin.type:
+    class: Em\EmliczaczBundle\Admin\TypeAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: emliczacz, label: Type }
+    arguments: [null, Em\EmliczaczBundle\Entity\Type, EmEmliczaczBundle:TypeAdmin]
